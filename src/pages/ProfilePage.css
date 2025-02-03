@@ -1,0 +1,17 @@
+/* ProfilePage.css */
+.profile-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .profile-info {
+    margin-bottom: 16px;
+  }
+  
+  .edit-btn {
+    margin-top: 20px;
+  }
+  
