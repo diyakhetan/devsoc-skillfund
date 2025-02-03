@@ -22,6 +22,7 @@ import {
   Person as PersonIcon
 } from '@mui/icons-material';
 import { useNavigate, useLocation } from 'react-router-dom';
+import './Navigation.css';  // Import the CSS file for styling
 
 const Navigation = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -47,25 +48,14 @@ const Navigation = () => {
   const drawer = (
     <List>
       {navigationItems.map((item) => (
-        <ListItem 
-          button 
+        <ListItem
+          button
           key={item.text}
           onClick={() => handleNavigation(item.path)}
           selected={location.pathname === item.path}
-          sx={{
-            '&.Mui-selected': {
-              backgroundColor: 'primary.main',
-              color: 'white',
-              '&:hover': {
-                backgroundColor: 'primary.dark',
-              },
-              '& .MuiListItemIcon-root': {
-                color: 'white',
-              },
-            },
-          }}
+          className="navigation-item"
         >
-          <ListItemIcon sx={{ color: location.pathname === item.path ? 'white' : 'inherit' }}>
+          <ListItemIcon className={`navigation-icon ${location.pathname === item.path ? 'selected' : ''}`}>
             {item.icon}
           </ListItemIcon>
           <ListItemText primary={item.text} />
@@ -76,14 +66,15 @@ const Navigation = () => {
 
   return (
     <>
-      <AppBar position="fixed">
+      <AppBar position="fixed" className="app-bar">
         <Toolbar>
           {isMobile && (
             <IconButton
               color="inherit"
               edge="start"
               onClick={() => setMobileOpen(!mobileOpen)}
-              sx={{ mr: 2 }}
+              className="menu-button"
+              aria-label="open navigation menu"
             >
               <MenuIcon />
             </IconButton>
@@ -91,22 +82,21 @@ const Navigation = () => {
           <Typography 
             variant="h6" 
             component="div" 
-            sx={{ flexGrow: 1, cursor: 'pointer' }}
+            className="logo"
             onClick={() => navigate('/')}
+            aria-label="go to homepage"
           >
             SkillFund
           </Typography>
           {!isMobile && (
-            <Box sx={{ display: 'flex', gap: 2 }}>
+            <Box className="desktop-nav">
               {navigationItems.map((item) => (
                 <Button
                   key={item.text}
                   color="inherit"
                   startIcon={item.icon}
                   onClick={() => handleNavigation(item.path)}
-                  sx={{
-                    backgroundColor: location.pathname === item.path ? 'primary.dark' : 'transparent',
-                  }}
+                  className={`desktop-button ${location.pathname === item.path ? 'selected' : ''}`}
                 >
                   {item.text}
                 </Button>
@@ -126,9 +116,7 @@ const Navigation = () => {
           ModalProps={{
             keepMounted: true, // Better mobile performance
           }}
-          sx={{
-            '& .MuiDrawer-paper': { width: 240 },
-          }}
+          className="drawer"
         >
           {drawer}
         </Drawer>

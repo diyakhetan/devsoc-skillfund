@@ -10,6 +10,7 @@ import {
 } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
 import ProjectCard from '../components/projects/ProjectCard';
+import './ProjectsPage.css';  // Import the CSS file for styling
 
 const DUMMY_PROJECTS = [
   {
@@ -36,7 +37,7 @@ const ProjectsPage = () => {
   );
 
   return (
-    <Container maxWidth="lg" sx={{ py: 4 }}>
+    <Container maxWidth="lg" className="projects-page">
       <Box sx={{ mb: 4 }}>
         <Typography variant="h4" gutterBottom>
           Available Services

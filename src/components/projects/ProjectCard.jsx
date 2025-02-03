@@ -9,20 +9,21 @@ import {
   CardActions
 } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
+import './ProjectCard.css';  // Import the CSS file for styling
 
 const ProjectCard = ({ project }) => {
   const navigate = useNavigate();
 
   return (
-    <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
-      <CardContent sx={{ flexGrow: 1 }}>
+    <Card className="project-card">
+      <CardContent className="project-card-content">
         <Typography gutterBottom variant="h6" component="h2">
           {project.title}
         </Typography>
-        <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
+        <Typography variant="body2" color="text.secondary" className="project-description">
           {project.description}
         </Typography>
-        <Box sx={{ mb: 2 }}>
+        <Box className="project-info">
           <Typography variant="subtitle2" color="primary">
             Cost: ${project.cost}
           </Typography>
@@ -33,7 +34,7 @@ const ProjectCard = ({ project }) => {
             Name of Instructor: {project.name}
           </Typography>
         </Box>
-        <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 0.5 }}>
+        <Box className="project-skills">
           {project.skills.map((skill) => (
             <Chip key={skill} label={skill} size="small" />
           ))}

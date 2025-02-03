@@ -1,0 +1,50 @@
+/* Navigation.css */
+
+/* App Bar Styling */
+.app-bar {
+    background-color: #1976d2;  /* Custom color for AppBar */
+  }
+  
+  .menu-button {
+    margin-right: 16px;
+  }
+  
+  .logo {
+    flex-grow: 1;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  /* Desktop Navigation */
+  .desktop-nav {
+    display: flex;
+    gap: 16px;
+  }
+  
+  /* Button styling for selected items */
+  .desktop-button.selected {
+    background-color: #1565c0;
+    color: white;
+  }
+  
+  /* Drawer (Mobile Navigation) */
+  .drawer .MuiDrawer-paper {
+    width: 240px;
+    background-color: #1976d2;
+  }
+  
+  /* ListItem for navigation */
+  .navigation-item.selected {
+    background-color: #1565c0;
+    color: white;
+  }
+  
+  .navigation-icon.selected {
+    color: white;
+  }
+  
+  /* Styling for icons in mobile view */
+  .navigation-icon {
+    color: inherit;
+  }
+  

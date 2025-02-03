@@ -10,6 +10,7 @@ import {
   Stack
 } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
+import './CreateProjectPage.css';  // Import the CSS file for styling
 
 const AVAILABLE_SKILLS = [
   'React', 'TypeScript', 'UI/UX', 'Web Design', 'Node.js',
@@ -40,7 +41,7 @@ const CreateProjectPage = () => {
 
   return (
     <Container maxWidth="md" sx={{ py: 4 }}>
-      <Paper sx={{ p: 4 }}>
+      <Paper className="create-project-paper">
         <Typography variant="h5" gutterBottom>
           Post a New Service
         </Typography>

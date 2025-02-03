@@ -1,0 +1,39 @@
+/* ProjectsPage.css */
+
+/* Container Styling */
+.projects-page {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+  
+  .projects-page .MuiTypography-h4 {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .projects-page .MuiGrid-root {
+    margin-top: 24px;
+  }
+  
+  .projects-page .MuiTextField-root {
+    margin-bottom: 16px;
+  }
+  
+  /* Custom styling for search field and category select */
+  .projects-page .MuiTextField-root input {
+    padding-left: 8px;
+  }
+  
+  .projects-page .MuiMenuItem-root {
+    font-weight: 500;
+  }
+  
+  /* Additional styling for the category filter */
+  .projects-page .MuiInputAdornment-root {
+    margin-right: 8px;
+  }
+  
+  .projects-page .MuiGrid-item {
+    margin-top: 16px;
+  }
+  
