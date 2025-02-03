@@ -23,16 +23,16 @@ const AVAILABLE_TYPES = [
 
 const CreateProjectPage = () => {
   const navigate = useNavigate();
-  const [selectedType, setSelectedType] = useState<string | null>(null);
-  const [selectedFile, setSelectedFile] = useState<File | null>(null);
+  const [selectedType, setSelectedType] = useState(null);
+  const [selectedFile, setSelectedFile] = useState(null);
 
-  const handleSubmit = (event: React.FormEvent) => {
+  const handleSubmit = (event) => {
     event.preventDefault();
     // Add project creation logic here
     navigate('/projects');
   };
 
-  const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const handleFileChange = (event) => {
     if (event.target.files && event.target.files[0]) {
       setSelectedFile(event.target.files[0]);
     }
@@ -66,7 +66,7 @@ const CreateProjectPage = () => {
               value={selectedType}
               onChange={(event, newValue) => setSelectedType(newValue)}
               renderInput={(params) => (
-                <TextField {...params} label="Type of Service" placeholder="Select type" />
+                <TextField {...params} required label="Type of Service" placeholder="Select type" />
               )}
             />
 
