@@ -39,14 +39,14 @@ const ProjectsPage = () => {
     <Container maxWidth="lg" sx={{ py: 4 }}>
       <Box sx={{ mb: 4 }}>
         <Typography variant="h4" gutterBottom>
-          Available Projects
+          Available Services
         </Typography>
         <Grid container spacing={2}>
           <Grid item xs={12} md={8}>
             <TextField
               fullWidth
               variant="outlined"
-              placeholder="Search projects..."
+              placeholder="Search services..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
               InputProps={{

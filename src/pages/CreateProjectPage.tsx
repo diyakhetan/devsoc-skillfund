@@ -16,6 +16,11 @@ const AVAILABLE_SKILLS = [
   'Python', 'Data Analysis', 'Content Writing', 'Graphic Design'
 ];
 
+const AVAILABLE_TYPES = [
+  'Academic', 'Sports', 'Technical Skills', 'Creative Skills', 'Public Speaking',
+  'Other'
+];
+
 const CreateProjectPage = () => {
   const navigate = useNavigate();
   
@@ -29,13 +34,13 @@ const CreateProjectPage = () => {
     <Container maxWidth="md" sx={{ py: 4 }}>
       <Paper sx={{ p: 4 }}>
         <Typography variant="h5" gutterBottom>
-          Post a New Project
+          Post a New Service
         </Typography>
         <Box component="form" onSubmit={handleSubmit}>
           <Stack spacing={3}>
             <TextField
               required
-              label="Project Title"
+              label="Service Title"
               fullWidth
             />
             <TextField
@@ -47,7 +52,7 @@ const CreateProjectPage = () => {
             />
             <TextField
               required
-              label="Budget"
+              label="Cost"
               type="number"
               InputProps={{
                 startAdornment: '$',
@@ -67,18 +72,29 @@ const CreateProjectPage = () => {
               renderInput={(params) => (
                 <TextField
                   {...params}
-                  label="Required Skills"
+                  label="Applied Skills"
                   placeholder="Select skills"
                 />
               )}
             />
+            <Autocomplete
+              options={AVAILABLE_TYPES}
+              renderInput={(params) => (
+                <TextField
+                  {...params}
+                  label="Type of Service"
+                  placeholder="Select type"
+                />
+              )}
+            />
+            
             <Button
               type="submit"
               variant="contained"
               color="primary"
               size="large"
             >
-              Post Project
+              Post Service
             </Button>
           </Stack>
         </Box>
