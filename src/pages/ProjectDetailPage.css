@@ -23,9 +23,12 @@
     flex-wrap: wrap;
     margin-top: 16px;
   }
-  
-  .book-now-btn {
-    margin-top: 24px;
-    padding: 12px 24px; /* Adjust padding for the button */
+
+/* ProjectDetailPage.css */
+.book-now-btn {
+    margin-top: 40px;  /* Increased margin-top for more space above the button */
+    padding: 12px 24px; /* Standard padding for the button */
   }
+  
+  
   

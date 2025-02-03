@@ -1,0 +1,21 @@
+/* DashboardPage.css */
+.dashboard-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .service-description {
+    margin-bottom: 16px;
+  }
+  
+  .service-info {
+    margin-bottom: 16px;
+  }
+  
+  .view-details-btn {
+    margin-top: auto;  /* Pushes the button to the bottom */
+  }
+  

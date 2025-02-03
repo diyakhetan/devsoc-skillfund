@@ -2,7 +2,6 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import { Container, Typography, Box, Button, Chip } from '@mui/material';
-import './ProjectDetailPage.css'; // Import the CSS file
 
 const DUMMY_PROJECTS = [
   {
@@ -22,7 +21,7 @@ const DUMMY_PROJECTS = [
 ];
 
 const ProjectDetailPage = () => {
-  const { projectId } = useParams(); // Get the project ID from the URL
+  const { projectId } = useParams();
   const project = DUMMY_PROJECTS.find((p) => p.id === projectId);
 
   if (!project) {
@@ -30,14 +29,14 @@ const ProjectDetailPage = () => {
   }
 
   return (
-    <Container maxWidth="md" className="container">
-      <Typography variant="h4" className="project-title">
+    <Container maxWidth="md" sx={{ py: 4 }}>
+      <Typography variant="h4" gutterBottom>
         {project.title}
       </Typography>
-      <Typography variant="body1" paragraph className="project-description">
+      <Typography variant="body1" paragraph>
         {project.extendedDescription}
       </Typography>
-      <Box className="project-info">
+      <Box sx={{ mb: 2 }}>
         <Typography variant="subtitle1" color="primary">
           Cost: ${project.cost}
         </Typography>
@@ -51,12 +50,12 @@ const ProjectDetailPage = () => {
           Instructor Credentials: {project.instructorCredentials}
         </Typography>
       </Box>
-      <Box className="project-skills">
+      <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}>
         {project.skills.map((skill) => (
           <Chip key={skill} label={skill} size="small" />
         ))}
       </Box>
-      <Button variant="contained" color="primary" className="book-now-btn">
+      <Button variant="contained" color="primary" sx={{ mt: 3 }}>
         Book Now
       </Button>
     </Container>
