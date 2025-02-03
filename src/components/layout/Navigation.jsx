@@ -32,8 +32,8 @@ const Navigation = () => {
   const location = useLocation();
 
   const navigationItems = [
-    { text: 'Browse Services', icon: <SearchIcon />, path: '/projects' },
-    { text: 'Post Service', icon: <AddIcon />, path: '/projects/create' },
+    { text: 'Browse Sessions', icon: <SearchIcon />, path: '/projects' },
+    { text: 'Post Session', icon: <AddIcon />, path: '/projects/create' },
     { text: 'Dashboard', icon: <Dashboard />, path: '/dashboard' },
     { text: 'Profile', icon: <PersonIcon />, path: '/profile' }
   ];

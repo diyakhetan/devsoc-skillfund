@@ -40,14 +40,14 @@ const ProjectsPage = () => {
     <Container maxWidth="lg" className="projects-page">
       <Box sx={{ mb: 4 }}>
         <Typography variant="h4" gutterBottom>
-          Available Services
+          Available Sessions
         </Typography>
         <Grid container spacing={2}>
           <Grid item xs={12} md={8}>
             <TextField
               fullWidth
               variant="outlined"
-              placeholder="Search services..."
+              placeholder="Search sessions..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
               InputProps={{

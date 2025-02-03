@@ -43,11 +43,11 @@ const CreateProjectPage = () => {
     <Container maxWidth="md" sx={{ py: 4 }}>
       <Paper className="create-project-paper">
         <Typography variant="h5" gutterBottom>
-          Post a New Service
+          Post a New Session
         </Typography>
         <Box component="form" onSubmit={handleSubmit}>
           <Stack spacing={3}>
-            <TextField required label="Service Title" fullWidth />
+            <TextField required label="Session Title" fullWidth />
             <TextField required label="Description" multiline rows={4} fullWidth />
             <TextField required label="Cost" type="number" InputProps={{ startAdornment: '$' }} />
             <TextField required label="Deadline" type="date" InputLabelProps={{ shrink: true }} />
@@ -61,13 +61,13 @@ const CreateProjectPage = () => {
               )}
             />
 
-            {/* Type of Service Selection */}
+            {/* Type of Session Selection */}
             <Autocomplete
               options={AVAILABLE_TYPES}
               value={selectedType}
               onChange={(event, newValue) => setSelectedType(newValue)}
               renderInput={(params) => (
-                <TextField {...params} required label="Type of Service" placeholder="Select type" />
+                <TextField {...params} required label="Type of Session" placeholder="Select type" />
               )}
             />
 
@@ -90,7 +90,7 @@ const CreateProjectPage = () => {
             )}
 
             <Button type="submit" variant="contained" color="primary" size="large">
-              Post Service
+              Post Session
             </Button>
           </Stack>
         </Box>
