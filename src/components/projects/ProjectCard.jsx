@@ -9,7 +9,7 @@ import {
   CardActions
 } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
-import './ProjectCard.css';  // Import the CSS file for styling
+import './ProjectCard.css';
 
 const ProjectCard = ({ project }) => {
   const navigate = useNavigate();
@@ -44,7 +44,7 @@ const ProjectCard = ({ project }) => {
         <Button 
           size="small" 
           color="primary"
-          onClick={() => navigate(`/projects/${project.id}`)}
+          onClick={() => navigate(`/projects/${project.id}`)} // Navigate to detail page
         >
           View Details
         </Button>
